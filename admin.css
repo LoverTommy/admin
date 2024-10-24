@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat';
+}
+
+table thead th,
+table tbody td {
+    border: 1px rgba(0, 0, 0, 0.281) solid;
+    border-collapse: collapse;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.table {
+    margin-bottom: 100px;
+    padding: 20px 0px 0px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tableTitle {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding-bottom: 12px;
+    padding-right: 20px;
+}
+
+.tableTitle h4 {
+    font-size: 24px;
+}
+
+.tableTitle .year {
+    font-weight: 500;
+    padding: 5px 14px;
+    border: 1px black solid;
+    height: max-content;
+    width: max-content;
+}
+
+.tableTitle button {
+    width: max-content;
+    padding: 5px 12px;
+    border: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.658);
+    color: white;
+    font-weight: 500;
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    transition: 0.6s;
+    border-radius: 16px;
+}
+
+.tableTitle button:hover {
+    background-color: rgb(0, 0, 0);
+}
+
+.tableTitle button span {
+    font-size: 20px;
+}
+
+table thead th {
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+table tbody td {
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.matches .tableTitle .courts {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+
+.matches .tableTitle .courts span {
+    font-size: 20px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.603);
+}
+
+.users .tableTitle h4,
+.players .tableTitle h4 {
+    width: max-content;
+}
+
+
+.tableWrapper {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.tableWrapper::-webkit-scrollbar {
+    height: 5px;
+    background-color: rgba(0, 0, 0, 0.068);
+    border-radius: 8px;
+}
+
+.tableWrapper::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 8px;
+}
+
+.tableWrapper table {
+    width: max-content;
+}
+
+
+@media screen and (max-width: 800px) {
+    .matches .tableTitle .courts span {
+        font-size: 14px;
+    }
+
+    .tableTitle h4 {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .tableTitle button {
+        font-size: 10px;
+    }
+
+    .tableTitle button span {
+        font-size: 16px;
+    }
+
+    table thead th {
+        font-size: 10px;
+        padding: 5px;
+    }
+
+    table tbody td {
+        font-size: 10px;
+    }
+
+    .tableTitle { 
+        gap: 10px;
+    }
+}
