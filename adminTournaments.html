@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <span id="openSideBar">Открыть</span>
+    <div class="sideBar" id="sideBar">
+        <span class="close" id="close">Закрыть</span>
+        <h5>Главная</h5>
+        <div class="list">
+            <h4>MAINPAGE</h4>
+            <ul>
+                <li>
+                    <span>News</span>
+                    <p><span>+</span>Добавить</p>
+                </li>
+                <li>
+                    <span>Top news</span>
+                    <p><span>+</span>Добавить</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="list">
+            <h4>CHAMPIONSHIP</h4>
+            <ul>
+                <li>
+                    <span>Championships</span>
+                    <p><span>+</span>Добавить</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="list">
+            <h4>ПОЛЬЗОВАТЕЛИ И ГРУППЫ</h4>
+            <ul>
+                <li>
+                    <span>Группы</span>
+                    <p><span>+</span>Добавить</p>
+                </li>
+                <li>
+                    <span>Пользователи</span>
+                    <p><span>+</span>Добавить</p>
+                </li>
+                <li>
+                    <span>Players</span>
+                    <p><span>+</span>Добавить</p>
+                </li>
+                <li>
+                    <span>Pairs</span>
+                    <p><span>+</span>Добавить</p>
+                </li>
+                <li>
+                    <span>Referees</span>
+                    <p><span>+</span>Добавить</p>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+    <div class="table tournaments" id="tournaments">
+        <div class="tableTitle">
+            <h4>Турниры</h4>
+            <select name="selectYears" id="">
+                <option value="2024" selected>2024</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+                <option value="2021">2021</option>
+            </select>
+            
+            <button>Добавить CHAMPIONSHIP <span>+</span></button>
+        </div>
+        <div class="tableWrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Название</th>
+                        <th>Город</th>
+                        <th>Место проведения</th>
+                        <th>Даты проведения</th>
+                        <th>Статус</th>
+                        <th>Участников</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Name</td>
+                        <td>City</td>
+                        <td>Place</td>
+                        <td>00.00.0000 - 00.00.0000</td>
+                        <td>Status</td>
+                        <td>100</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        const openSideBar = document.getElementById('openSideBar');
+        const closeSideBar = document.getElementById('close');
+
+        const sidebar = document.getElementById('sideBar');
+
+        closeSideBar.addEventListener('click', (eo)=>{
+            sidebar.style.display = 'none';
+        })
+
+        openSideBar.addEventListener('click', (eo)=>{
+            sidebar.style.display = 'flex';
+        })
+    </script>
+
+</body>
+</html>

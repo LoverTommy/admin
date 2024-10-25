@@ -4,6 +4,21 @@
     font-family: 'Montserrat';
 }
 
+#openSideBar {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 5px 8px;
+    background-color: rgba(0, 0, 0, 0.644);
+}
+
+.sideBar {
+    z-index: 200;
+}
+
 table thead th,
 table tbody td {
     border: 1px rgba(0, 0, 0, 0.281) solid;
@@ -16,7 +31,7 @@ table {
 
 .table {
     margin-bottom: 100px;
-    padding: 20px 0px 0px 20px;
+    padding: 60px 0px 0px 20px;
     width: 100%;
     box-sizing: border-box;
 }
@@ -33,12 +48,11 @@ table {
     font-size: 24px;
 }
 
-.tableTitle .year {
-    font-weight: 500;
-    padding: 5px 14px;
-    border: 1px black solid;
-    height: max-content;
+.tableTitle select {
     width: max-content;
+    border: 1px black solid;
+    outline: none;
+    padding: 5px;
 }
 
 .tableTitle button {
@@ -115,6 +129,89 @@ table tbody td {
 
 .tableWrapper table {
     width: max-content;
+}
+
+
+body {
+    display: flex;
+    gap: 0;
+}
+
+.sideBar {
+    height: 100vh;
+    padding: 20px;
+    background-color: rgb(20, 51, 77);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sideBar .close {
+    align-self: flex-end;
+    color: white;
+    cursor: pointer;
+}
+
+.sideBar h5 {
+    font-size: 20px;
+    color: white;
+    font-weight: 500;
+}
+
+.sideBar .list {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.603);
+}
+
+.sideBar .list h4 {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.63);
+    color: white;
+    font-weight: 400;
+    font-size: 12px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.sideBar .list ul {
+    list-style-type: none;
+}
+
+.sideBar .list ul li {
+    padding: 10px;
+    display: flex;
+    font-size: 14px;
+    gap: 50px;
+    justify-content: space-between;
+    border-bottom: 1px white solid;
+    cursor: pointer;
+    transition: 0.6s;
+    align-items: center;
+}
+
+.sideBar .list ul li:hover {
+    background-color: rgba(255, 255, 255, 0.185);
+}
+
+.sideBar .list ul li:last-child {
+    border-bottom: none;
+}
+
+.sideBar .list ul li span {
+    font-weight: 500;
+}
+
+.sideBar .list ul li p span {
+    font-size: 20px;
+    color: rgb(66, 151, 40);
+}
+
+.sideBar .list ul li p {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 
