@@ -147,6 +147,10 @@ body {
     position: absolute;
 }
 
+.courtButton {
+    cursor: pointer;
+}
+
 .sideBar .close {
     align-self: flex-end;
     color: white;

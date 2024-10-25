@@ -69,15 +69,15 @@
         <div class="tableTitle">
             <h4>Матчи турнира [Название турнира]</h4>
             <div class="courts">
-                <span>Центральный корт</span>
-                <span>Корт №1</span>
-                <span>Корт №2</span>
-                <span>Корт №3</span>
-                <span>Корт №4</span>
-                <span>Корт №5</span>
-                <span>Корт №6</span>
-                <span>Корт №7</span>
-                <span>Корт №8</span>
+                <span class="courtButton">Центральный корт</span>
+                <span class="courtButton">Корт №1</span>
+                <span class="courtButton">Корт №2</span>
+                <span class="courtButton">Корт №3</span>
+                <span class="courtButton">Корт №4</span>
+                <span class="courtButton">Корт №5</span>
+                <span class="courtButton">Корт №6</span>
+                <span class="courtButton">Корт №7</span>
+                <span class="courtButton">Корт №8</span>
             </div>
             <button>Добавить MATCH <span>+</span></button>
         </div>
@@ -85,7 +85,7 @@
             <table>
                 <thead>
                     <tr>
-                        <th colspan="11">[Номер корта]</th>
+                        <th colspan="11" id="setCourt">[Номер корта]</th>
                         <th>[Дата игрового дня]</th>
                     </tr>
                     
@@ -137,6 +137,16 @@
         openSideBar.addEventListener('click', (eo)=>{
             sidebar.style.display = 'flex';
         })
+
+
+        const courtButtons = document.getElementsByClassName('courtButton');
+        const setCourt = document.getElementById('setCourt');
+
+        for(let i of courtButtons) {
+            i.addEventListener('click',(eo)=>{
+                setCourt.innerHTML = eo.target.innerHTML;
+            })
+        }
     </script>
 </body>
 </html>
