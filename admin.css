@@ -141,9 +141,10 @@ body {
     height: 100vh;
     padding: 20px;
     background-color: rgb(20, 51, 77);
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 12px;
+    position: absolute;
 }
 
 .sideBar .close {
