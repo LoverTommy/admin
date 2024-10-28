@@ -11,6 +11,7 @@
     color: white;
     font-weight: 500;
     cursor: pointer;
+    display: none;
     padding: 5px 8px;
     background-color: rgba(0, 0, 0, 0.644);
 }
@@ -141,10 +142,9 @@ body {
     height: 100vh;
     padding: 20px;
     background-color: rgb(20, 51, 77);
-    display: none;
+    display: flex;
     flex-direction: column;
     gap: 12px;
-    position: absolute;
 }
 
 .courtButton {
@@ -217,6 +217,17 @@ body {
     display: flex;
     align-items: center;
     gap: 5px;
+}
+
+@media screen and (max-width: 1156px) {
+    .sideBar {
+        display: none;
+        position: absolute;
+    }
+
+    #openSideBar {
+        display: flex;
+    }
 }
 
 
